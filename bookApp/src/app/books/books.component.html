@@ -1,0 +1,23 @@
+<!-- <p>books works!</p> -->
+<!-- two way binding[(....)] means propety binding and event Binding -->
+<!-- <input [(ngModel)]="myString" />
+<button [disabled]="isDisable" (click)="isShowing = !isShowing">
+    <ng-container *ngIf="!isShowing">Show Books</ng-container>
+    <span *ngIf="isShowing">Hide Books
+
+    </span>
+    
+</button>
+<p>{{myString}}</p> -->
+
+<h1>Books</h1>
+<ul *ngIf="isShowing">
+    <ng-container *ngFor="let sbook of books ; let i =index">
+
+        <app-book [book]="sbook"></app-book>
+        
+
+    </ng-container>
+    
+    
+</ul>

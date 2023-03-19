@@ -1,0 +1,12 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.books{
+    list-style: none;
+    text-overflow: ellipsis;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}

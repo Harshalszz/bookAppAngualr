@@ -1,0 +1,10 @@
+<li  class="books">
+            
+    <!-- {{...}} is called interpolation -->
+    <!-- <img src="{{link}}" alt="{{name}}" width="100"> -->
+    <!-- [src] ="link" is property binding , src will take vaule from ts file -->
+    <img [src]="book.image" alt="{{book.name}}" width="100">
+    <p class="title">{{book.name | titlecase}} by {{book.author | titlecase}}</p>
+    <p class="currency">{{book.price | currency:'GBP'}}</p>
+    <button>AddToCart</button>
+</li>

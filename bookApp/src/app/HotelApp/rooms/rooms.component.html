@@ -1,0 +1,25 @@
+<p>rooms works!</p>
+<h1>Welcome to {{hotelName}}</h1>
+<div [hidden]="showRooms">
+
+    Number of rooms
+    <div [innerText]="numberRooms"></div>
+
+</div>
+
+<div *ngIf="selectedRooms">
+    {{selectedRooms | json}}
+
+</div>
+
+<div>
+    <button (click)="addRoom()">Add Room</button>
+</div>
+
+<div *ngIf="rooms.availableRoom > 0">
+
+    <app-rooms-list [rooms]="roomList" (roomSelected)="roomSelect($event)"  [title]="title"></app-rooms-list>
+</div>
+
+
+<button (click)="toggle()">Toggle</button>
